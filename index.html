@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="container py-5">
+    <!-- name app -->
+    <h1 class="text-info text-center mb-5 wow bounceInDown">Contact List Apps</h1>
+
+    <!-- search and add button -->
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="search me-5 wow bounceInLeft">
+        <label for="search" class="position-absolute m-1 ps-2"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></label>
+        <input
+          type="search"
+          id="search"
+          class="bg-info px-5 border-0 rounded-1"
+          placeholder="Search Contact"
+          onkeyup="findProduct(this.value)"
+        />
+      </div>
+      <div class="add wow bounceInRight">
+        <button
+          id="user-add"
+          type="button"
+          class="btn btn-info px-5"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <i class="fa-solid fa-user-plus"></i>
+          Add New Contact
+        </button>
+      </div>
+    </div>
+
+    <!-- start modal -->
+    <div>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-info py-3">
+            <div class="modal-body text-center">
+              <div class="mb-4">
+                <i class="fa-solid fa-user-plus fa-2xl text-light"></i>
+              </div>
+              <div class="">
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  placeholder="Full Name"
+                  aria-label="Username"
+                  id="full-name"
+                />
+                <input
+                  type="number"
+                  class="form-control mb-3"
+                  placeholder="Phone Number"
+                  aria-label="Username"
+                  id="phone"
+                />
+                <input
+                  type="email"
+                  class="form-control mb-3"
+                  placeholder="Email Address"
+                  aria-label="Username"
+                  id="email"
+                />
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  placeholder="Home Address"
+                  aria-label="Username"
+                  id="address"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="btn-add"
+                data-bs-dismiss="modal"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- start table -->
+    <div class="table-responsive mt-5 wow bounceInUp">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th scope="col"><i class="fa-solid fa-id-card"></i> Id</th>
+            <th scope="col"><i class="fa-solid fa-user"></i> Name</th>
+            <th scope="col"><i class="fa-solid fa-phone"></i>Phone</th>
+            <th scope="col"><i class="fa-solid fa-envelope"></i>Email</th>
+            <th scope="col">
+              <i class="fa-solid fa-map-location-dot"></i> Address
+            </th>
+            <th scope="col"><i class="fa-solid fa-pen-to-square"></i>Edit</th>
+            <th scope="col"><i class="fa-solid fa-trash"></i> Delete</th>
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+    <!-- end table -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+input[type="search"]{
+    outline: none ;
+    height: 35px;
+}
+div table thead tr th i{
+    color: #0dcaf0;
+    margin-right: 5px;
+}
+.edit{
+    display: none;
+}
+button{
+    background-color: #0dcaf0;
+    border:none;
+}
